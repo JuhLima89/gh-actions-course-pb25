@@ -12,7 +12,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - name: Install Dependencies
+      - name: Debug - listar raiz do workspace
+        run: ls -la
+      - name: Debug - listar pasta 04-using-actions
+        run: ls -la 04-using-actions || echo "Pasta 04-using-actions não existe"
+      - name: Debug - listar pasta react-app
+        run: ls -la 04-using-actions/react-app || echo "Pasta react-app não existe"
+      - name: Instalar dependências
         run: npm install --prefix 04-using-actions/react-app
     # 0. Verificar o código do repositório
     # 1. Instalar deps da nossa aplicação em react
