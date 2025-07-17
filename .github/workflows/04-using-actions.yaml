@@ -7,9 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verificar Código
-        uses: "actions/checkout@v4"
-      - name: Mostrar Pastas
-        run:  ls
+        uses: actions/checkout@v4
+      - name: Setup Node
+        run:  actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: 04-using-actions/react-app
     # 0. Verificar o código do repositório
     # 1. Instalar deps da nossa aplicação em react
     # 2. Executar testes automatizados
