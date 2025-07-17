@@ -1,1 +1,1 @@
-## Repositório com exemplos do curso GitActions!
+## Repositório com exemplos do curso GitActions! **EDITADO**
