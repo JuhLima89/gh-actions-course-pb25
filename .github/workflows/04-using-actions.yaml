@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Verificar Código
-        uses: actions/checkout@v4
+        uses: "actions/checkout@v4"
       - name: Mostrar Pastas
         run:  ls
     # 0. Verificar o código do repositório
