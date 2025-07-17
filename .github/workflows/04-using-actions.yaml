@@ -1,0 +1,15 @@
+name: 04 - Using Actions
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar Código
+        uses: actions/checkout@v4
+      - name: Mostrar Pastas
+        run: ls
+    # 0. Verificar o código do repositório
+    # 1. Instalar deps da nossa aplicação em react
+    # 2. Executar testes automatizados
