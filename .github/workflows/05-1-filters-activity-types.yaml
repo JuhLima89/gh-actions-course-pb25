@@ -3,7 +3,8 @@ name: 05 - 1 - Event Filters and Activity Types
 on:
   pull_request:
     types:
-      - closed
+      - opened
+      - synchronize
     branches:
       - main
 
@@ -11,4 +12,4 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rodar sempre que uma pull está closed"
+      - run: echo "Rodar sempre que uma pull é acionada ou sincronizada e a branch é a principal"
